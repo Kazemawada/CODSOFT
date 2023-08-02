@@ -1,0 +1,9 @@
+create table students(
+rollnumber integer primary key auto_increment,
+name varchar(30),
+grade double
+
+  );
+  
+  
+  remember to change password and database name
