@@ -124,6 +124,7 @@ if(e.getSource()==btnNewButton_2) {
 
 		try {
 			sys.dellstudent(i);
+			
 		} catch (SQLException e1) {
 			System.out.println("can't delete");
 			e1.printStackTrace();

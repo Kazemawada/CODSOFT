@@ -48,7 +48,26 @@ public class studentmangmentsystem {
               System.out.println("Failed to insert data.");
           }
 		
-          int id = students.get(students.size()-1).getRollnumber()+1;
+          
+          
+          preparedStatement = con.prepareStatement("select rollnumber from  students  where   name like ? ");
+    	  
+          preparedStatement.setString(1, name);
+         
+         
+
+
+         
+             ResultSet resultSet =  preparedStatement.executeQuery();
+
+           int id=0;
+             while (resultSet.next()) {
+                  id = resultSet.getInt("rollnumber");
+             }
+          
+          
+          
+  
   		 
           
           student e =new student(name,id,grade);
